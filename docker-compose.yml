@@ -8,12 +8,12 @@ networks:
 services:
   zimbra:
     container_name: zimbra
-    hostname: mail.example.net
+    hostname: mail.yurdusev.com
     build:
       context: ./docker
     ports:
       - '25:25'
-      - '80:80'
+      - '8088:80'
       - '465:465'
       - '587:587'
       - '110:110'
@@ -29,7 +29,7 @@ services:
       - 127.0.0.1
       - 8.8.8.8
     environment:
-      - PASSWORD=yourpass
+      - PASSWORD=123456aA
     volumes:
       - ./data:/opt/zimbra
 
